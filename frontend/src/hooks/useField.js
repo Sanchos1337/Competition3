@@ -1,11 +1,17 @@
+// hooks/useField.js
 import { useState } from "react";
 
-export const useField = (type) => {
-  const [value, setValue] = useState("");
+const useField = (initialValue) => {
+  const [value, setValue] = useState(initialValue);
 
-  const onChange = (e) => {
+  const handleChange = (e) => {
     setValue(e.target.value);
   };
 
-  return { type, value, onChange };
+  return {
+    value,
+    onChange: handleChange,
+  };
 };
+
+export default useField;

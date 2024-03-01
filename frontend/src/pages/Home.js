@@ -1,6 +1,7 @@
 // components
 import GoalDetails from "../components/GoalDetails";
 import GoalForm from "../components/GoalForm";
+import {useEffect, useState} from "react";
 
 const goalsArray = [
   {
